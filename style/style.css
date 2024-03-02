@@ -1,52 +1,55 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,500;1,600&display=swap'); */
-
-/* Lưu ý Menu-header
-    - Căn giữa thanh menu, căn trái, phải
-    - Thanh ngang
-    - Dropdown ngang, dọc(cột)
-    - Chèn hình ảnh vô mega-menu
-    -  */
-
-/* * {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none; 
-    border: none;
-    text-transform: capitalize;
-    transition: all .2s linear;
-    color: black;
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none; 
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  color: black;
+  font: inherit;
+}
+/* img,
+picture,
+svg,
+video {
+display: block;
+max-width: 100%;
+} */
+/* body {
+min-height: 100vh;
+font-family: "Roboto", sans-serif;
 } */
 
-/* html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top: 5.5px;
-    color: black;
-} */
-
-/* 1. Menu 1: Bên phải */
 header {
   display: flex;
+  /* top: 0; 
+  left: 0; 
+  right: 0; */
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
   z-index: 1000;
   font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
 }
 
 header nav ul li {
   position: relative;
   list-style: none;
-  float: left;
+  float: left; 
   padding: 10px 20px;
   color: #fff;
 }
 
-header nav ul li ul.dropdown {
+header nav ul  li ul.dropdown {
   display: none;
   position: absolute;
   top: 100%;
@@ -54,80 +57,27 @@ header nav ul li ul.dropdown {
   padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-header nav ul li:hover ul.dropdown {
+
+header nav ul li:hover > ul.dropdown {
   display: block;
 }
 
-header .menu a {
+
+header .menu a{
   font-size: 20px;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius:  5px;
+  padding: 10px 10px;
   color: black;
 }
 
 header .menu a.active,
-header .menu a:hover {
-  color: #fff;
-  background-color: #27ae60;
+header .menu a:hover{
+  /* color: #fff; */
+  color: #20bc5a  ;
 }
 
-@media (max-width: 991px) {
-  html {
-      font-size: 55%;
-  }
 
-  header {
-      padding: 5px 5px;
-  }
-}
 
-@media (max-width: 768px) {
-  header .menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #fff;
-      border-top: .1px solid rgba(0,0,0,.2);
-      border-bottom: .1px solid rgba(0,0,0,.2);
-      padding: 1px;
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-
-  header .menu.active {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  header .menu a {
-      display: block;
-      padding: 1.5px;
-      margin: 1px;
-      font-size: 14px;
-      background: #eee;
-  }
-}
-
-*,
-*:before,
-*:after {
-box-sizing: border-box;
-}
-* {
-margin: 0;
-padding: 0;
-font: inherit;
-}
-img,
-picture,
-svg,
-video {
-display: block;
-max-width: 100%;
-}
-body {
-min-height: 100vh;
-font-family: "Roboto", sans-serif;
-}
 
 /* style login */
 .login {
@@ -174,7 +124,7 @@ font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
 .login__container form button:hover {
-  background: #555;
+  background: #20bc5a;
 }
 .login__container form a {
   text-align: center;
@@ -244,7 +194,7 @@ font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
 .signup__container form button:hover {
-  background: #555;
+  background: #20bc5a;
 }
 .signup__container form a {
   text-align: center;
@@ -312,7 +262,7 @@ font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
 .password__container form button:hover {
-  background: #555;
+  background: #20bc5a;
 }
 .password__container form a {
   text-align: center;
@@ -321,7 +271,7 @@ font-family: "Roboto", sans-serif;
   color: #333;
 }
 .password__container form a:hover {
-  color: #555;
+  color: #20bc5a;
 }
 .password__registerButton {
   margin-top: 20px;
