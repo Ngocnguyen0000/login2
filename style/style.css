@@ -344,8 +344,10 @@ header .menu i:hover{
 
 }
 
-/* 
-@media (max-width: 1151px ) {
+
+
+
+@media (max-width: 436px ) {
   header .menu {
       position: absolute;
       top: 100%; left: 2px; right:2px;
@@ -369,4 +371,4 @@ header .menu i:hover{
       background: #eee;
   }
 
-} */
+}
