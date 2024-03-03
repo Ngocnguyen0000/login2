@@ -10,9 +10,10 @@ btnRegister.addEventListener("click", (e) => {
     inputPasswordRegister.value === ""
   ) {
     alert("vui lòng không để trống");
-  } else if ( inputUsernameRegister.value == "admin" || 
-              inputPasswordRegister.value !== 123) {
+  } else if ( inputUsernameRegister.value == "admin" &&
+              inputPasswordRegister.value == 123) {
     alert("Đăng Ký Thành Công.");
+    window.location.href = "index.html";
   }else {
     // array user
     const user = {
@@ -22,6 +23,6 @@ btnRegister.addEventListener("click", (e) => {
     let json = JSON.stringify(user);
     localStorage.setItem(inputUsernameRegister.value, json);
     alert("Tên đăng nhập hoặc mật khẩu không đúng");
-    window.location.href = "index.html";
+    window.location.href = "signup.html";
   }
 });
