@@ -1,9 +1,7 @@
-// validation form register and register user local storage
 const inputUsernameRegister = document.querySelector(".input-signup-username");
 const inputPasswordRegister = document.querySelector(".input-signup-password");
 const btnRegister = document.querySelector(".signup__signInButton");
 
-// validation form register and register user local storage
 
 btnRegister.addEventListener("click", (e) => {
   e.preventDefault();
@@ -12,7 +10,10 @@ btnRegister.addEventListener("click", (e) => {
     inputPasswordRegister.value === ""
   ) {
     alert("vui lòng không để trống");
-  } else {
+  } else if ( inputUsernameRegister.value == "admin" || 
+              inputPasswordRegister.value !== 123) {
+    alert("Đăng Ký Thành Công.");
+  }else {
     // array user
     const user = {
       username: inputUsernameRegister.value,
@@ -20,7 +21,7 @@ btnRegister.addEventListener("click", (e) => {
     };
     let json = JSON.stringify(user);
     localStorage.setItem(inputUsernameRegister.value, json);
-    alert("Đăng Ký Thành Công");
-    window.location.href = "login.html";
+    alert("Tên đăng nhập hoặc mật khẩu không đúng");
+    window.location.href = "index.html";
   }
 });
